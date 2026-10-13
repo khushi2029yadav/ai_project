@@ -1,0 +1,13 @@
+{
+  "name": "ai-project",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others --names backend,frontend --prefix-colors blue,green \"npm --prefix server run dev\" \"npm --prefix react/my-react-app run dev\"",
+    "dev:backend": "npm --prefix server run dev",
+    "dev:frontend": "npm --prefix react/my-react-app run dev",
+    "build": "npm --prefix react/my-react-app run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
